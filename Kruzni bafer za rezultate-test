@@ -1,1 +1,135 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <limits.h> // Limits koristimo da sa MIN_INT postavimo nevalidne vrijednosti bodova
+#define SIZE 10     // Bufer treba da drzi 10 elemenata
+/* Posto je ovo iskljucivo kruzni bafer iz koga se nikad nece brisati onda nije potrebno gledati pojmove punog i praznog, a 
+ni brisanja.
+Upis rezultata ce se vrsiti preko pomocnog niza pokazivaca koji se sortira i onda se vuce iz bafera, za rad u mainu
+ce biti potrebno ucitati bafere u memoriju iz binarne datoteke koja ce sadrzati 3 bafera za igre i jos sta odlucimo.
+Posto nismo odlucili jos, toga nema. Potrebno je deklarisati bafere i pozvati funkciju inicijalizujBafer() ako se ne ucitavaju
+u fajlove, prilikom upisa je potrebno kreirati pomocni niz, potom ga sortirati, proslijediti u funkciju za upis u CSV i potom
+osloboditi memoriju za pomocni niz sa pokazivacima. Prije gasenja aplikacije ce se morati updejtovati binarni fajl sa 
+svim potrebnim podacima , 3 bafera, globalni structovi koji prate ostale statistike...
+*/
+// Sta sadrzi sve struct tm:
+/*
+int tm_sec	seconds after the minute – [0, 61](until C99) / [0, 60] (since C99)[note 1]
+int tm_min	minutes after the hour – [0, 59]
+int tm_hour	hours since midnight – [0, 23]
+int tm_mday	day of the month – [1, 31]
+int tm_mon	months since January – [0, 11]
+int tm_year	years since 1900
+int tm_wday	days since Sunday – [0, 6]
+int tm_yday	days since January 1 – [0, 365]
+int tm_isdst	Daylight Saving Time flag. The value is positive if DST is in effect, zero if not and negative if no information is available
+*/
 
+typedef struct rezultat
+{
+    int brojBodova;
+    struct tm vrijemeDatum;
+} REZULTAT;
+typedef struct baferRezultata
+{
+    REZULTAT podaci[SIZE];
+    int rear;
+} BAFERREZULTATA;
+// Protitipi za f-je
+void inicijalizujBafer(BAFERREZULTATA *);
+void dodajRezultat(BAFERREZULTATA *, int);
+REZULTAT **kreirajPomocniNiz(BAFERREZULTATA *, int *); // Funkcija sama alocira
+void kopirajVrijeme(struct tm *, struct tm *);         // Pomocna za dodaj rezultat
+void sortirajPomocniNiz(REZULTAT **, int);
+// U mainu inicijalizujemo jedan bafer, potom stavljamo rezultate nekakve i onda sortiramo niz;
+int main()
+{
+    BAFERREZULTATA test1;
+    inicijalizujBafer(&test1);
+    for (int i = 0; i < 10000; i += 400)
+        dodajRezultat(&test1, i % 144); // Ovdje bezveze bacam neke brojeve unutra
+    int size;
+    REZULTAT **niz = kreirajPomocniNiz(&test1, &size); //ova f-ja ima bocni efekat, u slucaju da bafer ne sadrzi 10 rezultata(sto ce biti rijetko)
+    for (int i = 0; i < size; i++)
+        printf("(%d) godina: %d\n", niz[i]->brojBodova, niz[i]->vrijemeDatum.tm_year); // godina onako, cisto da se vidi da je struct ok
+    sortirajPomocniNiz(niz, size);                                                     // ovdje bocni efekat od kreiraj pomaze
+    printf("Ovdje su sortirani podaci:\n");
+    for (int i = 0; i < size; i++)
+        printf("(%d) godina: %d\n", niz[i]->brojBodova, niz[i]->vrijemeDatum.tm_year);
+    free(niz);
+    // Ako vas buni sto je godina 118, to je zato sto struct mjeri od 1900 broj godina !
+    // Sada cemo inicijalizovati bafer koji se nece popuniti do kraja
+    BAFERREZULTATA test2;
+    inicijalizujBafer(&test2);
+    printf("test br2:\n");
+    for (int i = 0; i < 2401; i += 400)
+        dodajRezultat(&test2, i % 144);     // Ovdje bezveze bacam neke brojeve unutra
+    niz = kreirajPomocniNiz(&test2, &size); //ova f-ja ima bocni efekat, u slucaju da bafer ne sadrzi 10 rezultata(sto ce biti rijetko)
+    for (int i = 0; i < size; i++)
+        printf("(%d) godina: %d\n", niz[i]->brojBodova, niz[i]->vrijemeDatum.tm_year); // godina onako, cisto da se vidi da je struct ok
+    sortirajPomocniNiz(niz, size);                                                     // ovdje bocni efekat od kreiraj pomaze
+    printf("Ovdje su sortirani podaci:\n");
+    for (int i = 0; i < size; i++)
+        printf("(%d) godina: %d\n", niz[i]->brojBodova, niz[i]->vrijemeDatum.tm_year);
+    free(niz);
+    //
+}
+void kopirajVrijeme(struct tm *dest, struct tm *a) //
+{
+    dest->tm_hour = a->tm_hour;
+    dest->tm_isdst = a->tm_isdst;
+    dest->tm_mday = a->tm_mday;
+    dest->tm_min = a->tm_min;
+    dest->tm_mon = a->tm_mon;
+    dest->tm_sec = a->tm_sec;
+    dest->tm_wday = a->tm_wday;
+    dest->tm_yday = a->tm_yday;
+    dest->tm_year = a->tm_year;
+}
+void dodajRezultat(BAFERREZULTATA *bf, int bodovi)
+{
+    time_t vrijeme;
+    time(&vrijeme);
+    struct tm *a = (struct tm *)calloc(1, sizeof(struct tm));
+    a = localtime(&vrijeme);
+    // Prekopiravanje sa structa, malo sakato ali mi nije drugo palo na pamet
+    kopirajVrijeme(&(bf->podaci[bf->rear].vrijemeDatum), a);
+    free(a);
+    bf->podaci[bf->rear].brojBodova = bodovi;
+    bf->rear = ++bf->rear % SIZE;
+}
+void inicijalizujBafer(BAFERREZULTATA *bf) // POSTAVLJA REAR NA 0 I STAVLJA NAJMANJI MOGUCI INT KAO DEFAULT VRIJEDNOST
+{
+    for (int i = 0; i < 10; i++)
+    {
+        bf->podaci[i].brojBodova = INT_MIN;
+    }
+    bf->rear = 0;
+}
+REZULTAT **kreirajPomocniNiz(BAFERREZULTATA *izvor, int *b)
+{
+    int size = 0;
+    for (int i = 0; i < 10; i++)
+        if (izvor->podaci[i].brojBodova != INT_MIN)
+            size++;
+    *b = size;
+    REZULTAT **pomNiz = (REZULTAT **)calloc(size, sizeof(REZULTAT *));
+    for (int i = 0; i < size; i++)
+    {
+        pomNiz[i] = &(izvor->podaci[i]);
+    }
+    return pomNiz;
+}
+void sortirajPomocniNiz(REZULTAT **niz, int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        int max = i;
+        for (int j = i + 1; j < size; j++)
+            if (niz[max]->brojBodova < niz[j]->brojBodova)
+                max = j;
+        REZULTAT *tmp = niz[i];
+        niz[i] = niz[max];
+        niz[max] = tmp;
+    }
+}
