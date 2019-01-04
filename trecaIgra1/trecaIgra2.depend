@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1546561182 source:c:\users\nikola\desktop\trecaigra2\main.c
+	<stdio.h>
+	"loto.h"
+	<windows.h>
+	<limits.h>
+	<stdlib.h>
+	<windows.h>
+	<math.h>
+
+1546563358 source:c:\users\nikola\desktop\trecaigra2\loto.c
+	"loto.h"
+	"consolemanip.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+	<math.h>
+	<limits.h>
+
+1546561743 c:\users\nikola\desktop\trecaigra2\loto.h
+
+1546561018 source:c:\users\nikola\desktop\trecaigra2\consolemanip.c
+	"consolemanip.h"
+	<windows.h>
+	<string.h>
+
+1546563864 c:\users\nikola\desktop\trecaigra2\consolemanip.h
+
