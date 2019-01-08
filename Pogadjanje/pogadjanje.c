@@ -5,6 +5,7 @@
 #include <time.h>
 #include <string.h>
 #include <windows.h>
+#include <limits.h>
 int normal()//funkcija koja poziva normalan mod igre
 {
     srand((unsigned)time(NULL));                                        //seeding
@@ -132,8 +133,8 @@ int playPogadjanje(int brojIgranja, int izgubljeniPoeniIns)
 {
     int bodovi;
     if(brojIgranja<3) bodovi=easy();
-    else if(izgubljeniPoeniIns>=100) bodovi=impossible();
-    else bodovi=normal();
+    else if(izgubljeniPoeniIns>=100 && izgubljeniPoeniIns!=INT_MAX) bodovi=impossible();
+    else if(izgubljeniPoeniIns==INT_MAX) bodovi=normal();
     changeTextColor(CYAN);
     printf("\nOsvojeno %d bodova\n\n", bodovi);
     changeTextColor(DEFAULT);
