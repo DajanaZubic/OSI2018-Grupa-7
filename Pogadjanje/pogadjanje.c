@@ -134,7 +134,7 @@ int playPogadjanje(int brojIgranja, int izgubljeniPoeniIns)
     int bodovi;
     if(brojIgranja<3) bodovi=easy();
     else if(izgubljeniPoeniIns>=100 && izgubljeniPoeniIns!=INT_MAX) bodovi=impossible();
-    else if(izgubljeniPoeniIns==INT_MAX) bodovi=normal();
+    else bodovi=normal();
     changeTextColor(CYAN);
     printf("\nOsvojeno %d bodova\n\n", bodovi);
     changeTextColor(DEFAULT);
