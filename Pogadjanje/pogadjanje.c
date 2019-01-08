@@ -129,15 +129,27 @@ int unos(int i, int (*pf)(char*, int*))
     return u;
 }
 
-int playPogadjanje(int brojIgranja, int izgubljeniPoeniIns)
+int playPogadjanje(int izgubljeniPoeniIns)
 {
-    int bodovi;
+    int bodovi, brojIgranja=0;
+    FILE *fp;
+    if((fp=fopen("pognum.dat", "rb"))!=NULL)
+    {
+        fread(&brojIgranja, sizeof(int), 1, fp);
+        fclose(fp);
+    }
+    else if((fp=fopen("pognum.dat", "wb"))!=NULL)
+    {
+        fwrite(&brojIgranja, sizeof(int), 1, fp);
+        fclose(fp);
+    }
     if(brojIgranja<3) bodovi=easy();
     else if(izgubljeniPoeniIns>=100 && izgubljeniPoeniIns!=INT_MAX) bodovi=impossible();
     else bodovi=normal();
     changeTextColor(CYAN);
     printf("\nOsvojeno %d bodova\n\n", bodovi);
     changeTextColor(DEFAULT);
+    if((fp=fopen("pognum.dat", "wb"))!=NULL) {brojIgranja++; fwrite(&brojIgranja, sizeof(int), 1, fp); fclose(fp);}
     return bodovi;
 }
 int impossible()
