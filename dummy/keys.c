@@ -359,7 +359,7 @@ int kontrolaUnosaOtk1(char* string, int *br)
         if(!isdigit(string[i]))
         {
             changeTextColor(YELLOW);
-            printf("Prihvataju se samo cifre od 0 i 1!\n");
+            printf("Prihvataju se samo cifre 0 i 1!\n");
             Sleep(3000);
         clsInput();
             changeTextColor(DEFAULT);
