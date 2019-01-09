@@ -1,0 +1,667 @@
+01
+        aaaa     
+       aaaaa     
+      aaaaaa     
+     aaa aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     
+         aaa     - 
+
+02
+      aaaaa      
+     aaaaaaa     
+    aaa   aaa    
+   aaa    aaa    
+         aaa     
+        aaa      
+       aaa       
+      aaa        
+     aaa         
+    aaa          
+   aaa           
+   aaaaaaaaaaa   
+   aaaaaaaaaaa   -
+
+03
+      aaaaa      
+     aaaaaaa     
+    aaa   aaa    
+   aaa     aaa   
+            aaa  
+           aaa   
+          aaa    
+           aaa   
+            aaa  
+   aaa     aaa   
+    aaa   aaa    
+     aaaaaaa     
+      aaaaa      -
+
+04
+        aaaa     
+       aaaaa     
+      aaaaaa     
+     aaa aaa     
+    aaa  aaa     
+   aaa   aaa     
+  aaa    aaa     
+  aaaaaaaaaaaa   
+  aaaaaaaaaaaa   
+         aaa     
+         aaa     
+         aaa     
+         aaa     -
+
+05
+   aaaaaaaaaa    
+   aaaaaaaaaa    
+   aaa           
+   aaa           
+   aaaaaaa       
+   aaaaaaaa      
+         aaa     
+          aaa    
+          aaa    
+          aaa    
+         aaa     
+   aaaaaaaa      
+   aaaaaaa       -
+
+06
+      aaaaaa     
+     aaaaaaaa    
+    aaa          
+   aaa           
+  aaa            
+  aaa            
+  aaaaaaaaaaaa   
+  aaaaaaaaaaaaa  
+  aaa       aaa  
+   aaa     aaa   
+    aaa   aaa    
+     aaaaaaa     
+      aaaaa      -
+
+07
+  aaaaaaaaaaaaa  
+  aaaaaaaaaaaaa  
+            aaa  
+           aaa   
+          aaa    
+         aaa     
+        aaa      
+       aaa       
+      aaa        
+     aaa         
+    aaa          
+   aaa           
+  aaa            -
+
+08
+      aaaa       
+     aaaaaa      
+    aaa  aaa     
+   aaa    aaa    
+    aaa  aaa     
+     aaaaaa      
+      aaaa       
+     aaaaaa      
+    aaa  aaa     
+   aaa    aaa    
+    aaa  aaa     
+     aaaaaa      
+      aaaa       -
+
+09
+      aaaaa      
+     aaaaaaa     
+    aaa   aaa    
+   aaa     aaa   
+  aaa       aaa  
+  aaaaaaaaaaaaa  
+  aaaaaaaaaaaaa  
+            aaa  
+            aaa  
+           aaa   
+          aaa    
+    aaaaaaaa     
+     aaaaaa      -
+
+10
+    aaaa   aaaa  
+   aaaaa  aaaaaa 
+  aaaaaa aaa  aaa
+ aaa aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+     aaa aaa  aaa
+     aaa  aaaaaa 
+     aaa   aaaa  -
+
+11
+    aaaa     aaaa
+   aaaaa    aaaaa
+  aaaaaa   aaaaaa
+ aaa aaa  aaa aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa
+     aaa      aaa-
+
+12
+   aaaa   aaaaa  
+  aaaaa  aaaaaaa 
+ aaaaaa aa    aaa
+aaa aaa a     aaa
+    aaa      aaa 
+    aaa      aaa 
+    aaa     aaa  
+    aaa    aaa   
+    aaa   aaa    
+    aaa  aaa     
+    aaa  aaa     
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa- 
+
+13
+    aaaa    aaaa 
+   aaaaa   aaaaaa
+  aaaaaa  aa  aaa
+ aaa aaa      aaa
+     aaa      aaa
+     aaa     aaa 
+     aaa    aaa  
+     aaa     aaa 
+     aaa      aaa
+     aaa      aaa
+     aaa  aa  aaa
+     aaa   aaaaaa
+     aaa    aaaa -
+
+14
+   aaaa       aa 
+  aaaaa      aaa 
+ aaaaaa     aaaa 
+aaa aaa    aa aa 
+    aaa   aa  aa 
+    aaa  aa   aa 
+    aaa aa    aa 
+    aaa aaaaaaaaa
+    aaa aaaaaaaaa
+    aaa      aaa 
+    aaa      aaa 
+    aaa      aaa 
+    aaa      aaa - 
+
+15
+   aaaa aaaaaaaaa
+  aaaaa aaaaaaaaa
+ aaaaaa aaa      
+aaa aaa aaa      
+    aaa aaaaaa   
+    aaa aaaaaaaa 
+    aaa      aaaa
+    aaa       aaa
+    aaa      aaaa
+    aaa     aaaa 
+    aaa    aaaa  
+    aaa  aaaa    
+    aaa  aaa     -
+
+16
+   aaaa  aaaaaaaa
+  aaaaa  aaaaaaaa
+ aaaaaa  aa      
+aaa aaa  aa      
+    aaa  aa      
+    aaa  aa      
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa
+    aaa  aa    aa
+    aaa  aa    aa
+    aaa  aa    aa
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa-
+
+17
+   aaaa aaaaaaaaa
+  aaaaa aaaaaaaaa
+ aaaaaa       aaa
+aaa aaa       aaa
+    aaa       aaa
+    aaa      aaa 
+    aaa      aaa 
+    aaa      aaa 
+    aaa     aaa  
+    aaa     aaa  
+    aaa     aa   
+    aaa     aa   
+    aaa     aa   -
+18
+   aaa    aaaa   
+  aaaa   aaaaaa  
+ aaaaa  aaa  aaa 
+aaa aa aaa    aaa
+    aa  aaa  aaa 
+    aa   aaaaaa  
+    aa    aaaa   
+    aa   aaaaaa  
+    aa  aaa  aaa 
+    aa aaa    aaa
+    aa  aaa  aaa 
+    aa   aaaaaa  
+    aa    aaaa   -
+19
+   aaaa    aaa   
+  aaaaa   aaaaa  
+ aaaaaa  aaa aaa 
+aaa aaa aaa   aaa
+    aaa aaa   aaa
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa
+    aaa      aaaa
+    aaa      aaa 
+    aaa     aaa  
+    aaa    aaa   
+    aaa  aaaa    
+    aaa  aaa     -
+20
+  aaa      aaaa  
+ aaaaa    aaaaaa 
+aa   aa  aaa  aaa
+a    aa  aa    aa
+     aa  aa    aa
+     aa  aa    aa
+    aa   aa    aa
+   aa    aa    aa
+  aa     aa    aa
+ aa      aa    aa
+aa       aaa  aaa
+aaaaaaa   aaaaaa 
+aaaaaaa    aaaa  -  
+21
+  aaaaa      aaaa
+ aaaaaaa    aaaaa
+aaa   aaa  aaaaaa
+aa    aaa aaa aaa
+      aaa     aaa
+     aaa      aaa
+    aaa       aaa
+   aaa        aaa
+  aaa         aaa
+ aaa          aaa
+aaa           aaa
+aaaaaaaaaa    aaa
+aaaaaaaaaa    aaa-
+22
+  aaaa     aaaa  
+ aaaaaa   aaaaaa 
+aa   aaa aa   aaa
+a    aaa a    aaa
+     aaa      aaa
+     aaa      aaa
+    aaa      aaa 
+   aaa      aaa  
+  aaa      aaa   
+ aaa      aaa    
+aaa      aaa     
+aaaaaaaa aaaaaaaa
+aaaaaaaa aaaaaaaa-
+23
+  aaa     aaa    
+ aaaaa   aaaaa   
+aa   aa aaa aaa  
+a    aa aa   aaa 
+     aa       aaa
+     aa      aaa 
+    aa      aaa  
+   aa        aaa 
+  aa          aaa
+ aa     aa   aaa 
+aa      aaa aaa  
+aaaaaaa  aaaaa   
+aaaaaaa   aaa   -
+24
+  aaa         aa 
+ aaaaa       aaa 
+aa   aa     aaaa 
+a    aa    aa aa 
+     aa   aa  aa 
+     aa  aa   aa 
+    aa  aa    aa 
+   aa   aaaaaaaaa
+  aa    aaaaaaaaa
+ aa           aa 
+aa            aa 
+aaaaaaa       aa 
+aaaaaaa       aa -
+25
+  aaa   aaaaaaaaa
+ aaaaa  aaaaaaaaa
+aa   aa aaa      
+a    aa aaa      
+     aa aaaaaaa  
+     aa aaaaaaaa 
+    aa       aaa 
+   aa         aaa
+  aa          aaa
+ aa           aaa
+aa           aaa 
+aaaaaaa aaaaaaa  
+aaaaaaa aaaaaa   -
+26
+  aaa        aaa 
+ aaaaa      aaa  
+aa   aa    aaa   
+a    aa   aaa    
+     aa  aaa     
+     aa aaaa     
+    aa  aaaaaaaa 
+   aa   aaaaaaaa 
+  aa    aaa   aaa
+ aa     aaa   aaa
+aa      aaa   aaa
+aaaaaaa  aaaaaaa 
+aaaaaaa   aaaaa  -
+
+27
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa      aaa
+aa   aaa       aa
+a    aa       aaa
+    aaa       aa 
+    aa       aaa 
+   aaa       aa  
+  aa        aaa  
+ aaa        aa   
+aaa        aaa   
+aaaaaaaa   aa    
+aaaaaaaa  aaa    -
+
+28
+  aaaa     aaaa  
+ aaaaaa   aaaaaa 
+aa   aaa aa    aa
+aa   aaa aa    aa
+a    aa  aa    aa
+    aaa   aa  aa 
+    aa     aaaa  
+   aaa    aa  aa 
+  aa     aa    aa
+ aaa     aa    aa
+aaa      aa    aa
+aaaaaaaa  aaaaaa 
+aaaaaaaa   aaaa  -
+
+29
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa aaa  aaa
+aa   aaa aaa  aaa
+a    aa  aaa  aaa
+    aaa  aaaaaaaa
+    aa   aaaaaaaa
+   aaa        aaa
+  aa          aaa
+ aaa          aaa
+aaa           aaa
+aaaaaaaa aaaaaaaa
+aaaaaaaa aaaaaaaa-
+
+30
+  aaaa   aaaaaaaa
+ aaaaaaa aaaaaaaa
+aa   aaa aaa  aaa
+     aaa aaa  aaa
+     aaa aaa  aaa
+    aaa  aaa  aaa
+   aaa   aaa  aaa
+    aaa  aaa  aaa
+     aaa aaa  aaa
+     aaa aaa  aaa
+aa   aaa aaa  aaa
+ aaaaaa  aaaaaaaa
+  aaaa   aaaaaaaa-
+
+31
+  aaaa       aaaa
+ aaaaaa     aaaaa
+aa   aaa   aaaaaa
+     aaa  aaaaaaa
+     aaa aaa  aaa
+    aaa       aaa
+   aaa        aaa
+    aaa       aaa
+     aaa      aaa
+     aaa      aaa
+aa   aaa      aaa
+ aaaaaa       aaa
+  aaaa        aaa-
+
+32
+  aaaa     aaaa  
+ aaaaaa   aaaaaa 
+aa   aaa aa   aaa
+     aaa aa   aaa
+     aaa a    aa 
+    aaa      aaa 
+   aaa       aa  
+    aaa     aaa  
+     aaa   aa    
+     aaa  aaa    
+aa   aaa aaa     
+ aaaaaa  aaaaaaaa
+  aaaa   aaaaaaaa-
+
+33
+  aaaa     aaaa  
+ aaaaaa   aaaaaa 
+aa   aaa aa   aaa
+     aaa      aaa
+     aaa      aaa
+    aaa      aaa 
+   aaa      aaa  
+    aaa      aaa 
+     aaa      aaa
+     aaa      aaa
+aa   aaa aa   aaa
+ aaaaaa   aaaaaa 
+  aaaa     aaaa  -
+
+34
+  aaaa        aa 
+ aaaaaa      aaa 
+aa   aaa    aaaa 
+     aaa   aaaaa 
+     aaa  aa  aa 
+    aaa  aa   aa 
+   aaa   aa   aa 
+    aaa  aaaaaaaa
+     aaa aaaaaaaa
+     aaa     aaa 
+aa   aaa     aaa 
+ aaaaaa      aaa 
+  aaaa       aaa -
+
+
+35
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa aaa     
+     aaa aaa     
+     aaa aaa     
+    aaa  aaaaa   
+   aaa   aaaaaaa 
+    aaa      aaaa
+     aaa     aaaa
+     aaa     aaaa
+aa   aaa     aaaa
+ aaaaaa  aaaaaaa 
+  aaaa   aaaaaa  -
+
+36
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa aaa     
+     aaa aaa     
+     aaa aaa     
+    aaa  aaa     
+   aaa   aaaaaaaa
+    aaa  aaaaaaaa
+     aaa aaa  aaa
+     aaa aaa  aaa
+aa   aaa aaa  aaa
+ aaaaaa  aaaaaaaa
+  aaaa   aaaaaaaa-
+
+37
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa      aaa
+     aaa       aa
+     aaa      aaa
+    aaa       aa 
+   aaa       aaa 
+    aaa      aa  
+     aaa    aaa  
+     aaa    aa   
+aa   aaa   aaa   
+ aaaaaa    aa    
+  aaaa    aaa    -
+  
+38
+  aaaa     aaaa  
+ aaaaaa   aaaaaa 
+aa   aaa aa    aa
+     aaa aa    aa
+     aaa aa    aa
+    aaa   aa  aa 
+   aaa     aaaa  
+    aaa   aa  aa 
+     aaa aa    aa
+     aaa aa    aa
+aa   aaa aa    aa
+ aaaaaa   aaaaaa 
+  aaaa     aaaa  -
+
+39
+  aaaa   aaaaaaaa
+ aaaaaa  aaaaaaaa
+aa   aaa aaa  aaa
+     aaa aaa  aaa
+     aaa aaa  aaa
+    aaa  aaaaaaaa
+   aaa   aaaaaaaa
+    aaa       aaa
+     aaa      aaa
+     aaa      aaa
+aa   aaa      aaa
+ aaaaaa  aaaaaaaa
+  aaaa   aaaaaaaa-
+
+40
+     aa  aaaaaaaa
+    aaa  aaaaaaaa
+   aaaa  aaa  aaa
+  aaaaa  aaa  aaa
+ aa  aa  aaa  aaa
+aa   aa  aaa  aaa
+aa   aa  aaa  aaa
+aaaaaaaa aaa  aaa
+aaaaaaaa aaa  aaa
+    aaa  aaa  aaa
+    aaa  aaa  aaa
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa-
+
+
+41
+     aa      aaaa
+    aaa     aaaaa
+   aaaa    aaaaaa
+  aaaaa   aaaaaaa
+ aa  aa  aaa  aaa
+aa   aa       aaa
+aa   aa       aaa
+aaaaaaaa      aaa
+aaaaaaaa      aaa
+    aaa       aaa
+    aaa       aaa
+    aaa       aaa
+    aaa       aaa-
+
+42
+     aa    aaaa  
+    aaa   aaaaaa 
+   aaaa  aa   aaa
+  aaaaa  aa   aaa
+ aa  aa  a    aa 
+aa   aa      aaa 
+aa   aa      aa  
+aaaaaaaa    aaa  
+aaaaaaaa   aa    
+    aaa   aaa    
+    aaa  aaa     
+    aaa  aaaaaaaa
+    aaa  aaaaaaaa-
+
+43
+     aa    aaaa  
+    aaa   aaaaaa 
+   aaaa  aa   aaa
+  aaaaa       aaa
+ aa  aa       aaa
+aa   aa      aaa 
+aa   aa     aaa  
+aaaaaaaa     aaa 
+aaaaaaaa      aaa
+    aaa       aaa
+    aaa  aa   aaa
+    aaa   aaaaaa 
+    aaa    aaaa  -
+
+44
+     aa       aa 
+    aaa      aaa 
+   aaaa     aaaa 
+  aaaaa    aaaaa 
+ aa  aa   aa  aa 
+aa   aa  aa   aa 
+aa   aa  aa   aa 
+aaaaaaaa aaaaaaaa
+aaaaaaaa aaaaaaaa
+    aaa      aaa 
+    aaa      aaa 
+    aaa      aaa 
+    aaa      aaa -
+
+45
+     aa  aaaaaaaa
+    aaa  aaaaaaaa
+   aaaa  aaa     
+  aaaaa  aaa     
+ aa  aa  aaa     
+aa   aa  aaaaa   
+aa   aa  aaaaaaa 
+aaaaaaaa     aaaa
+aaaaaaaa     aaaa
+    aaa      aaaa
+    aaa      aaaa
+    aaa  aaaaaaa 
+    aaa  aaaaaa  -
