@@ -21,5 +21,15 @@ int pronadjiNedozvoljeni(char*);
 void encrypt(KEY*);
 char* decrypt(char*);
 KEY* readKeys(int*);
+//za prikaz i otkazivanje kljuceva
 int writeKeys(KEY*,int*);
+void prikaziKljuceve(int, int);
+void printTableKey(int, int);
+void otkaziKljuc(int);//ako nema nekog od kljuceva
+int unosOtkazivanje(int (*)(char*, int*));
+int kontrolaUnosaOtk1(char*, int*);
+int kontrolaUnosaOtk2(char*, int*);
+void clsInput();
+void showCancelKeys();//glavna funkcija, ide direktno u meni
+void spawnKeys(); //testna
 #endif // KEYS_H_INCLUDED
