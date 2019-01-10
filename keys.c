@@ -8,6 +8,7 @@
 #include <windows.h>
 int kontrolaKljuca(int igra)
 {
+    system("cls");
     KEY *key;
     int brojKljuceva, found=0, changeKey=0, i, notPass=0;;
         key=readKeys(&brojKljuceva);
@@ -32,12 +33,14 @@ int kontrolaKljuca(int igra)
         printf("Unesite kljuc sa 16 brojeva u grupama po 4 broja odvojena znakom \"-\":\n");
         //SMINKANJE
         char *tempkey=unosKey();
+        free(key);
+        key=readKeys(&brojKljuceva);
         found=0, changeKey=0;
         i=-1;
         while(!found && ++i<brojKljuceva)
         {
             char *cp;
-            if(!strcmp(tempkey, cp=decrypt(key[i].encrypted_key))) found=1;
+            if(!strcmp(tempkey, cp=decrypt(key[i].encrypted_key)) && key[i].game==igra) found=1;
             free(cp);
         }
         free(tempkey);
@@ -63,6 +66,7 @@ int kontrolaKljuca(int igra)
             Sleep(1000);
             key[i].id='a';
         }
+        Sleep(1200);
         writeKeys(key, &brojKljuceva);
         if(notPass)
         {
@@ -452,7 +456,7 @@ int kontrolaUnosaOtk2(char* string, int *br)
 void showCancelKeys()
 {
     int unos;
-    system("mode 80,40");
+    system("mode 81,40");
     do
     {
         prikaziKljuceve(0, 0);

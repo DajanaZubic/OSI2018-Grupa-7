@@ -44,20 +44,17 @@ int main()
             else if(unos2==4) generateKey(&key, &brojKljuceva, 4, NEOGRANICEN);
             if(unos2 && unos3)
             {
-                char *cp=decrypt(key[brojKljuceva-1].encrypted_key);
                 writeKeys(key,&brojKljuceva);
-                printf("Generisanje uspjesno. Kljuc je %s\n\n\n", cp);
+                printf("Generisanje uspjesno.\n");
                 system("pause");
-                free(cp);
             }
-            else writeKeys(key,&brojKljuceva);
         }
         else if(unos==2)
         {
             system("cls");
             printNewKeys(key, brojKljuceva);
             printf("\n"); system("pause");
-            writeKeys(key,&brojKljuceva);
+            free(key);
         }
     }while(unos);
     return 0;
