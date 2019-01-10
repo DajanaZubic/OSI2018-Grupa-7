@@ -58,7 +58,7 @@ void sortirajPomocniNiz(REZULTAT **niz, int size)
 }
 void pisiCSV(BAFERREZULTATA *igra1, BAFERREZULTATA *igra2, BAFERREZULTATA *igra3)
 {
-    FILE *csv = fopen("Preled_statistike.csv", "w");
+    FILE *csv = fopen("Pregled_statistike.csv", "w");
     int size1, size2, size3;
     REZULTAT **pomocni1 = kreirajPomocniNiz(igra1, &size1);
     REZULTAT **pomocni2 = kreirajPomocniNiz(igra2, &size2);

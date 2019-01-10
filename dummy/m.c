@@ -5,7 +5,7 @@
 #include "consolemanip.h"
 #include "meni.h"
 #include "bafer.h"
-#include "utility.h" // FJA ZA KONTROLU DOBITKA BODOVE
+#include "utility.h" 
 //Igre
 #include "igra2.h"
 #include "igra4.h"
@@ -13,9 +13,9 @@
 #include "pogadjanje.h"
 // Kljucevi
 #include "keys.h"
-# define MG "MAGENT GAMES"
+# define MG "MAGNET GAMES"
 //
-PLAYER igrac; // GLOBALNO BICE
+PLAYER igrac; // Globalni igrac
 int main()
 {
     changeConsoleTitle(MG);
@@ -33,9 +33,7 @@ int main()
 
     }
     pozdravPlayera(&igrac);
-    //
-    spawnKeys(); // Testna f-ja // POTREBNO OTKOCITI PRILIKOM FINALNE VERZIJE
-    //
+
     // n1 vanjski meni, n2 unutrasnji meniji
     int navigation1 = 1;
     int navigation2;
@@ -74,7 +72,6 @@ int main()
                 {
                     if (kontrolaKljuca(2))
                     {
-                        //
                         changeConsoleTitle("KVIZ");
                         system("mode 160,20");
                         expectedLoss = calcNTLPoints(igrac.ukupniDobijeniPoeni, igrac.ukupniIzgubljeniPoeni, igrac.brojOdigranihPartija);
@@ -84,9 +81,9 @@ int main()
                         currentResult = igrajIgru2(expectedLoss);
                         kr = time(0);
                         timeSpent(2, poc, kr);
-                        // Malo fensi ispis
+                        // Ispis
                         printf("%s ste %d bodova", currentResult < 0 ? "Izgubili" : "Dobili",
-                               currentResult < 0 ? currentResult * -1 : currentResult); // OVDJE DODATI SVASTA
+                               currentResult < 0 ? currentResult * -1 : currentResult); 
                         Sleep(1800);
                         // U zavisnosti od rezultata, incrementuje se sta treba
                         if (currentResult < 0)

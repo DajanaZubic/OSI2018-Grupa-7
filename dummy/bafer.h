@@ -42,16 +42,16 @@ typedef struct baferRezultata
 // OBAVEZNO pozvati poslije stvaranja bafera u mainu zbog nacina funkcionisanja
 void inicijalizujBafer(BAFERREZULTATA *);
 void dodajRezultat(BAFERREZULTATA *, int);
-REZULTAT **kreirajPomocniNiz(BAFERREZULTATA *, int *); 
-void kopirajVrijeme(struct tm *, struct tm *);         
+REZULTAT **kreirajPomocniNiz(BAFERREZULTATA *, int *);
+void kopirajVrijeme(struct tm *, struct tm *);
 void sortirajPomocniNiz(REZULTAT **, int);
 // Ispis u CSV zvati
 void pisiCSV(BAFERREZULTATA *, BAFERREZULTATA *, BAFERREZULTATA *);
 // Za prikaz tabele
 void prikaziTabeluStatistike(BAFERREZULTATA *, BAFERREZULTATA *, BAFERREZULTATA *);
-// Ako ima ucitace ako nema nece, zato je bitno inicijalizuj... zvati prije 
+// Ako ima ucitace ako nema nece, zato je bitno inicijalizuj... zvati prije
 void expBaferi(BAFERREZULTATA *, BAFERREZULTATA *, BAFERREZULTATA *);
-// Obavezno iz ponovo izbaciti u fajl prije izlaza. Sad da li da se updejtuje poslije svake partije sva 3 
-// Malo nema smisla al mozda Dujla proba zatvoriti konzolu unutar igre 
-void impBaferi(BAFERREZULTATA *, BAFERREZULTATA *, BAFERREZULTATA *); 
+// Obavezno iz ponovo izbaciti u fajl prije izlaza. Sad da li da se updejtuje poslije svake partije sva 3
+// Malo nema smisla al mozda Dujla proba zatvoriti konzolu unutar igre
+void impBaferi(BAFERREZULTATA *, BAFERREZULTATA *, BAFERREZULTATA *);
 #endif

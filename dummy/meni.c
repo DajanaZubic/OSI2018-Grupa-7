@@ -54,7 +54,6 @@ void upisiPlayera(PLAYER *pla)
     fwrite(pla, sizeof(PLAYER), 1, fp);
     fclose(fp);
 }
-//
 // FUNKCIJE ZA IZLGED I VRACANJE BROJA KOJIM SE VRSI NAVIGACIJA
 
 void printajNaslov()
@@ -104,17 +103,7 @@ int obradibrojniUnos(int limit, void (*scr)())
     }
     return tmp[0] - '0';
 }
-void dummyGame(int param)
-{
-    system("cls");
-    printf("IGRA SE IGRA");
-    for (int i = 0; i < 3; i++)
-    {
-        Sleep(850);
-        printf(".");
-    }
-    printf("%d\n", param);
-}
+
 void screen0()
 {
     system("cls");
