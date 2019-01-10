@@ -156,7 +156,18 @@ char* decrypt(char *cryptedKey)
 KEY* readKeys(int *brojKljuceva)
 {
     FILE *fp;
-    if((fp=fopen("keys.dat", "rb"))!=NULL)
+    int open=0;
+    if((fp=fopen("keys.dat", "rb"))!=NULL) open=1;
+    if(!open)
+    {
+        if((fp=fopen("keys.dat", "wb"))!=NULL)
+        {
+            *brojKljuceva=0;
+            fwrite(brojKljuceva, sizeof(int), 1, fp);
+            fclose(fp);
+        }
+    }
+    if(open || (fp=fopen("keys.dat", "rb"))!=NULL)
     {
         fread(brojKljuceva, sizeof(int), 1, fp);
         KEY* key=(KEY*)malloc(*brojKljuceva*sizeof(KEY));
@@ -164,16 +175,7 @@ KEY* readKeys(int *brojKljuceva)
         fclose(fp);
         return key;
     }
-    else
-    {
-        if((fp=fopen("keys.dat", "wb"))!=NULL)
-        {
-            int i=0;
-            fwrite(&i, sizeof(int), 1, fp);
-            fclose(fp);
-        }
-        return NULL;
-    }
+    return NULL;
 }
 int writeKeys(KEY *key,int *brojKljuceva)
 {
