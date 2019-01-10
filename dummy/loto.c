@@ -187,6 +187,7 @@ int playLoto(int izgubljeniBodoviIns, int *ukupniIzgubljeniBodovi, int *ukupniDo
     if (*ukupniDobijeniBodovi - *ukupniIzgubljeniBodovi < 100)
     {
         printf("Nemate dovoljno bodova da biste igrali loto!\n");
+        Sleep(2000);//dodato da bi se procitala poruka
         return 0;
     }
     int dobijeniBodovi, nizBrojeva[7] = {0};
@@ -211,7 +212,7 @@ int playLoto(int izgubljeniBodoviIns, int *ukupniIzgubljeniBodovi, int *ukupniDo
         *ukupniIzgubljeniBodovi += (100 - dobijeniBodovi);
     else
         *ukupniDobijeniBodovi += dobijeniBodovi - 100;
-    // DODATO ZA ISPIS; 
+    // DODATO ZA ISPIS;
     Sleep(1800);
     //
     return dobijeniBodovi;
