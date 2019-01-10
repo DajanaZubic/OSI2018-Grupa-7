@@ -38,7 +38,7 @@ int kontrolaKljuca(int igra)
         while(!found && ++i<brojKljuceva)
         {
             char *cp;
-            if(!strcmp(tempkey, cp=decrypt(key[i].encrypted_key))) found=1;
+            if(!strcmp(tempkey, cp=decrypt(key[i].encrypted_key)) && key[i].game==igra) found=1;
             free(cp);
         }
         free(tempkey);
