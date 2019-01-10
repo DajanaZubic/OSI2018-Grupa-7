@@ -79,7 +79,7 @@ int kontrolaUnosa3(char *string, int *br, int *uneseniNiz)
     {
         if (!isNumber(string[i])) //...da li ima znakova koji nisu cifre od 0 do 9
         {
-            printf("Prihvataju se samo cifre od 0 do 9!\n\n");
+            printf("Unesite broj od 1 do 45!\n\n");
             return 1;
         }
     }
