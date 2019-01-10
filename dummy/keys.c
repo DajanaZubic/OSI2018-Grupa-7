@@ -33,6 +33,8 @@ int kontrolaKljuca(int igra)
         printf("Unesite kljuc sa 16 brojeva u grupama po 4 broja odvojena znakom \"-\":\n");
         //SMINKANJE
         char *tempkey=unosKey();
+        free(key);
+        key=readKeys(&brojKljuceva);
         found=0, changeKey=0;
         i=-1;
         while(!found && ++i<brojKljuceva)
@@ -64,7 +66,7 @@ int kontrolaKljuca(int igra)
             Sleep(1000);
             key[i].id='a';
         }
-        Sleep(1200);// Dodato da procita poruku
+        Sleep(1200);
         writeKeys(key, &brojKljuceva);
         if(notPass)
         {
@@ -153,6 +155,28 @@ char* decrypt(char *cryptedKey)
     for(int i=0; i<strlen(temp); i++) temp[i]-=POMJERAJ;//testno blokiranje
     return temp;
 }
+/*KEY* readKeys(int *brojKljuceva)
+{
+    FILE *fp;
+    if((fp=fopen("keys.dat", "rb"))!=NULL)
+    {
+        fread(brojKljuceva, sizeof(int), 1, fp);
+        KEY* key=(KEY*)malloc(*brojKljuceva*sizeof(KEY));
+        fread(key, sizeof(KEY), *brojKljuceva, fp);
+        fclose(fp);
+        return key;
+    }
+    else
+    {
+        if((fp=fopen("keys.dat", "wb"))!=NULL)
+        {
+            int i=0;
+            fwrite(&i, sizeof(int), 1, fp);
+            fclose(fp);
+        }
+        return NULL;
+    }
+}*/
 KEY* readKeys(int *brojKljuceva)
 {
     FILE *fp;
@@ -296,32 +320,28 @@ void printTableKey(int x, int y)
 void spawnKeys()//testna
 {
     FILE *fp;
-    int brojKljuceva=6;    //inicijalizovanje broja kljuceva
+    int brojKljuceva=5;    //inicijalizovanje broja kljuceva
     //definisanje kljuceva
     KEY key1active={1, 'a', {'2', '5', '1', '2', '-', '7', '7', '2', '1', '-', '6', '3', '3','9', '-', '5', '8', '8', '7','\0'}, SAT, 3400};
     KEY key1new={1, 'n', {'1', '4', '0', '1', '-', '8', '8', '1', '0', '-', '7', '4', '2','4', '-', '5', '9', '8', '3','\0'}, DAN, 0};
     KEY key1old={1, 'o', {'3', '3', '2', '1', '-', '7', '9', '4', '4', '-', '4', '1', '2','9', '-', '3', '2', '1', '3','\0'}, DAN, 86450};
     KEY key2active={2, 'a', {'1', '1', '3', '9', '-', '6', '4', '4', '8', '-', '4', '4', '4','4', '-', '3', '3', '2', '7','\0'}, SEDAM_DANA, SEDAM_DANA-1};
     KEY key4active={4, 'a', {'1', '2', '3', '4', '-', '5', '6', '5', '6', '-', '9', '8', '7','6', '-', '0', '0', '9', '6','\0'}, NEOGRANICEN, 3700};
-    KEY key3new={3,'n',{'1','2','3','4','-','1','2','3','4','-','1','2','3','4','-','1','2','3','4','\0'},DAN,0};
     //sifrovanje kljuceva
     encrypt(&key1active);
     encrypt(&key1new);
     encrypt(&key1old);
     encrypt(&key2active);
     encrypt(&key4active);
-    encrypt(&key3new);
     //upis u datoteku i zatvaranje
     if((fp=fopen("keys.dat", "wb"))!=NULL)
     {
         fwrite(&brojKljuceva, sizeof(int), 1, fp);
-        // Dodavanje kjuceva
         fwrite(&key1active, sizeof(KEY), 1, fp);
         fwrite(&key1new, sizeof(KEY), 1, fp);
         fwrite(&key1old, sizeof(KEY), 1, fp);
         fwrite(&key2active, sizeof(KEY), 1, fp);
         fwrite(&key4active, sizeof(KEY), 1, fp);
-        fwrite(&key3new,sizeof(KEY),1,fp);
         fclose(fp);
     }
     else printf("Greska kod otvaranja datoteke sa kljucevima!");
@@ -436,7 +456,7 @@ int kontrolaUnosaOtk2(char* string, int *br)
 void showCancelKeys()
 {
     int unos;
-    system("mode 80,40");
+    system("mode 81,40");
     do
     {
         prikaziKljuceve(0, 0);
@@ -458,4 +478,3 @@ void clsInput()
 {
     gotoxy(0, 24); for(int i=0; i<80*15; i++) printf(" "); gotoxy(0, 24);
 }
-
